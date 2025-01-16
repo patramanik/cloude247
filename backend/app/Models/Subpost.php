@@ -5,7 +5,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Category extends Model
+class Subpost extends Model
 {
     use HasFactory;
 
@@ -14,7 +14,7 @@ class Category extends Model
      *
      * @var string
      */
-    protected $table = 'category';
+    protected $table = 'subpost';
 
     /**
      * The attributes that are mass assignable.
@@ -22,11 +22,9 @@ class Category extends Model
      * @var array
      */
     protected $fillable = [
-        'subject_id',
-        'name',
-        'image',
-        'keywords',
-        'meta_description',
+        'post_id',
+        'topic_name',
+        'content',
         'status',
         'created_by',
     ];
@@ -41,15 +39,15 @@ class Category extends Model
     ];
 
     /**
-     * Get the subject associated with the category.
+     * Get the post associated with the subpost.
      */
-    public function subject()
+    public function post()
     {
-        return $this->belongsTo(Subject::class, 'subject_id');
+        return $this->belongsTo(Post::class, 'post_id');
     }
 
     /**
-     * Get the user who created the category.
+     * Get the user who created the subpost.
      */
     public function creator()
     {
