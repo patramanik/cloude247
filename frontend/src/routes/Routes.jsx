@@ -1,6 +1,5 @@
 import { useEffect } from 'react';
 import { Route, Routes,useLocation } from "react-router-dom";
-import Home from "../pages/Home/Home";
 import About from "../pages/About/About";
 import Contact from "../pages/Contact/Contact";
 
@@ -8,6 +7,7 @@ import Contact from "../pages/Contact/Contact";
 import Dashboard from '../pages/Dashboard';
 import SignInForm from '../pages/Auth/SignIn';
 import SignUpFrom from '../pages/Auth/SignUp';
+import Profile from '../pages/Porfile/Profile';
 
 const AppRouter = () => {
 
@@ -23,7 +23,7 @@ const AppRouter = () => {
   return (
     <Routes>
       <Route path="/" exact element={<Dashboard/>} />
-      <Route path="/home" exact element={<Home />} />
+      <Route path="/profile" exact element={<Profile />} />
       <Route path="/about" element={<About />} />
       <Route path="/contact" element={<Contact />} />
       <Route path="/register" element={<SignUpFrom/>} />
