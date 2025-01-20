@@ -15,7 +15,7 @@ class AuthController extends Controller
             'role_id' => 'required|integer',
             'name' => 'required|string|max:255',
             'email' => 'required|email|unique:users,email',
-            'password' => 'required|string|min:8',
+            'password' => 'required|string|min:8|confirmed',
         ]);
         // dd($validatedData);
 
