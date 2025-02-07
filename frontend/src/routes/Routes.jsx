@@ -19,7 +19,6 @@ const AppRouter = () => {
     document.querySelector('html').style.scrollBehavior = ''
   }, [location.pathname]); // triggered on route change
 
-
   return (
     <Routes>
       <Route path="/" exact element={<Dashboard/>} />

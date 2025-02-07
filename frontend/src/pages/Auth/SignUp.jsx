@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import axiosClient from "../../axios-client"; // Correct axios client import
+import { Link } from "react-router-dom"; // Correct import for Link
 
 const SignUpForm = () => {
   // State for form inputs
@@ -63,12 +64,12 @@ const SignUpForm = () => {
   return (
     <section className="bg-gray-50 dark:bg-gray-900">
       <div className="flex flex-col items-center justify-center px-6 py-8 mx-auto md:h-screen lg:py-0">
-        <a
-          href="#"
+        <Link
+          to="/"
           className="flex items-center mb-6 text-3xl font-semibold text-gray-900 dark:text-white"
         >
           Cloude247
-        </a>
+        </Link>
         <div className="w-full bg-white rounded-lg shadow dark:border md:mt-0 sm:max-w-md xl:p-0 dark:bg-gray-800 dark:border-gray-700">
           <div className="p-6 space-y-4 md:space-y-6 sm:p-8">
             <h1 className="text-xl font-bold leading-tight tracking-tight text-gray-900 md:text-2xl dark:text-white">
@@ -198,12 +199,12 @@ const SignUpForm = () => {
                     className="font-light text-gray-500 dark:text-gray-300"
                   >
                     I accept the{" "}
-                    <a
-                      href="#"
+                    <Link
+                      to="#"
                       className="font-medium text-primary-600 hover:underline dark:text-primary-500"
                     >
                       Terms and Conditions
-                    </a>
+                    </Link>
                   </label>
                 </div>
               </div>
@@ -218,12 +219,12 @@ const SignUpForm = () => {
 
               <p className="text-sm font-light text-gray-500 dark:text-gray-400">
                 Already have an account?{" "}
-                <a
-                  href="#"
+                <Link
+                  to="/login"
                   className="font-medium text-primary-600 hover:underline dark:text-primary-500"
                 >
                   Login here
-                </a>
+                </Link>
               </p>
             </form>
           </div>
